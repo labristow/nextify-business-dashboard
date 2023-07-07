@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Product1 from "@/assets/web-assets/1.png";
 
-export default function DsicoverContent() {
+export default function DiscoverContent() {
   return (
     <div className="w-[465px] h-[260px] rounded-2xl bg-yellow-500 overflow-hidden">
       <Image
