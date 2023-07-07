@@ -5,7 +5,7 @@ import React from "react";
 function Login() {
   return (
     <div className="w-full h-screen overflow-y-auto">
-      <HomeNavbar isBgOpaque={true} />
+      <HomeNavbar />
       <ForgetPasswordLayout />
     </div>
   );
