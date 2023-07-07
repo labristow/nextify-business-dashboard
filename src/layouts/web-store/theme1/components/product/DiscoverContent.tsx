@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Product1 from "@/assets/web-assets/1.png";
+import Product1 from "../../../../../assets/web-assets/Slider.png";
 
 export default function DiscoverContent() {
   return (
