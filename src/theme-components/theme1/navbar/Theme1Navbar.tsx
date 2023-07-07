@@ -1,5 +1,5 @@
 import React from "react";
-import Topbar from "./JumiaTopbar";
+// import Topbar from "./JumiaTopbar";
 import Image from "next/image";
 import Logo from "../assets/jumia-logo.png";
 
