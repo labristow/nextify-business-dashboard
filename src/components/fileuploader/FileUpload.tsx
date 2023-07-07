@@ -1,10 +1,10 @@
 import { SVGS } from "@/assets/SVGS";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 
 interface IProductData {
-  value: (string | File)[];
+  value?: (string | File)[];
   handleFileUpload: (data: (string | File)[]) => void;
 }
 function FileUpload({ value, handleFileUpload }: IProductData) {
@@ -41,7 +41,7 @@ function FileUpload({ value, handleFileUpload }: IProductData) {
     let allFiles = [...fileLists, ...validFiles];
     if (allFiles.length > 5) {
       allFiles = allFiles.slice(allFiles.length - 5, allFiles.length);
-      toast.error("Product images cannot be more than 5")
+      toast.error("Product images cannot be more than 5");
     }
     // Set local props
     setFileLists(allFiles);
@@ -54,7 +54,9 @@ function FileUpload({ value, handleFileUpload }: IProductData) {
   };
   const onDragOver = (e: React.DragEvent<HTMLDivElement>) => e.preventDefault();
   useEffect(() => {
-    setFileLists(value);
+    if (value) {
+      setFileLists(value);
+    }
   }, [value]);
 
   return (

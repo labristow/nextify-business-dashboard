@@ -14,7 +14,7 @@ interface IProductData {
   category: string;
   description: string;
   currency: string;
-  images: [] | File[];
+  images: (string | File)[];
 }
 const categories = [
   {
@@ -88,7 +88,7 @@ function AddProduct() {
       });
     }
   };
-  const handleFileUpload = (data: File[]) => {
+  const handleFileUpload = (data: (string | File)[]) => {
     setProductData({
       ...productData,
       ["images"]: data,
