@@ -28,19 +28,19 @@ function Index({ greetingIndex }: { greetingIndex: number }) {
     {
       cardName: "New Customers",
       Icon: SVGS.ProfileIcon,
-      count: currencyConverter(300),
+      count: currencyConverter(32),
       // unit: "₦",
     },
     {
       cardName: "Pending Orders",
       Icon: SVGS.OrderIcon,
-      count: currencyConverter(300),
+      count: currencyConverter(2),
       // unit: "₦",
     },
     {
       cardName: "Total Orders",
       Icon: SVGS.OrderIcon,
-      count: currencyConverter(300),
+      count: currencyConverter(78),
       // unit: "₦",
     },
   ]);
