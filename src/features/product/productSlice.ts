@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import products from "@/mock/products.json";
 
 interface IProductProps {
-  color: string;
+  // color: string;
   oldprice: string;
   price: string;
   name: string;
