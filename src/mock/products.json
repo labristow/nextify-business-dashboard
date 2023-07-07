@@ -1,0 +1,92 @@
+[
+  {
+    "id": "23454121",
+    "status": "active",
+    "oldprice": "0",
+    "price": "8000",
+    "name": "Short Sleeve Crew Neck Soft Fitted Tees",
+    "description": "INTO THE AM Mens T Shirt - Short Sleeve Crew Neck Soft Fitted Tees S - 4XL Fresh Classic Tshirt",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg",
+      "https://m.media-amazon.com/images/I/81PWpbHThML._AC_UL1500_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=1",
+    "currency": "₦"
+  },
+  {
+    "id": "23454122",
+    "status": "draft",
+    "oldprice": "0",
+    "price": "5000",
+    "name": "Fresh Classic Tshirt",
+    "description": "Classic Tshirt with a fresh design",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/81PWpbHThML._AC_UL1500_.jpg",
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=2",
+    "currency": "₦"
+  },
+  {
+    "id": "23454123",
+    "status": "discount",
+    "oldprice": "9500",
+    "price": "7000",
+    "name": "Men's T Shirt with crazy jeans",
+    "description": "Trendy Men's T Shirt paired with crazy jeans",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg",
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=3",
+    "currency": "₦"
+  },
+  {
+    "id": "23454124",
+    "status": "active",
+    "oldprice": "0",
+    "price": "6500",
+    "name": "Maclaurine T Shirt",
+    "description": "Comfortable Maclaurine T Shirt for everyday wear",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/51zFWTwKWmL._AC_UL1250_.jpg",
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=4",
+    "currency": "₦"
+  },
+  {
+    "id": "23454125",
+    "status": "draft",
+    "oldprice": "0",
+    "price": "7000",
+    "name": "Givency roundneck T Shirt",
+    "description": "Stylish roundneck T Shirt by Givency",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg",
+      "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=5",
+    "currency": "₦"
+  },
+  {
+    "id": "23454126",
+    "status": "discount",
+    "oldprice": "10000",
+    "price": "8500",
+    "name": "AM Mens T Shirt",
+    "description": "AM Mens T Shirt for a casual yet stylish look",
+    "category": "Clothing",
+    "images": [
+      "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg",
+      "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
+    ],
+    "url": "/store/happy-coffe?id=6",
+    "currency": "₦"
+  }
+]
