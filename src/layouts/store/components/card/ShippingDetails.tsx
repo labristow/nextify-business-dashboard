@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import PrimeLogo from "@/assets/prime-logo.png";
 import TextSelect from "@/components/select/TextSelect";
-import statesData from "@/mock/states.json";
+import statesData from "@/mock/states_and_lgas.json"; /*@/mock/states.json";*/
 import { SelectChangeEvent } from "@mui/material";
 
 function ShippingDetails() {
@@ -73,7 +73,7 @@ function ShippingDetails() {
               name={"state"}
               value={shippingData.state}
               options={allStates}
-              handleChange={handleShippingDetailsChange}
+              onChange={handleShippingDetailsChange}
             />
           </div>
           <div className="mt-5">
@@ -83,7 +83,7 @@ function ShippingDetails() {
               name={"lga"}
               value={shippingData.lga}
               options={selectedLGA}
-              handleChange={handleShippingDetailsChange}
+              onChange={handleShippingDetailsChange}
             />
           </div>
         </div>
