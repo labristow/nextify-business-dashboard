@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DsicoverContent from "./DsicoverContent";
+import DiscoverContent from "./DiscoverContent";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -55,7 +55,7 @@ const DiscoverContainer = () => {
             .fill("")
             .map((_, index) => (
               <SwiperSlide key={index}>
-                <DsicoverContent />
+                <DiscoverContent />
               </SwiperSlide>
             ))}
         </Swiper>
