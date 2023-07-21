@@ -17,7 +17,7 @@ function TransactionTable() {
     );
   };
   return (
-    <div className="w-full overflow-x-auto bg-white h-[80vh] border border-gray-200 rounded-xl px-8 py-3">
+    <div className="w-full overflow-x-auto bg-white h-[80vh] border border-gray-200 rounded-xl px-5 lg:px-8 py-3">
       <TableTop link={"#"} title={"Recent transactions"} />
       <div className="w-full  min-w-[350px] h-[calc(80vh_-_150px)] overflow-y-scroll custom__scrollbar pr-6">
         {data.transactions.today && (

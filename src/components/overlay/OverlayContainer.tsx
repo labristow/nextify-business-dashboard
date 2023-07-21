@@ -26,7 +26,7 @@ function OverlayContainer() {
       {overlay.name && (
         <div
           onClick={modalShouldNotCloseOnOverlayClick ? doNothing : closeOverlay}
-          className="overlay w-full h-screen fixed top-0 left-0 bg-[#00000090] z-40 backdrop-blur-sm"
+          className="overlay w-full h-screen px-5 lg:px-0 fixed top-0 left-0 bg-[#00000090] z-40 backdrop-blur-sm"
         >
           {/* {JSON.stringify(overlay)} */}
           {overlay.name === "add-product-overlay" && <AddProduct />}

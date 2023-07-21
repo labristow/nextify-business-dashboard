@@ -2,151 +2,82 @@ import React, { RefObject, useEffect, useRef, useState } from "react";
 import WhatWeDoCard from "./WhatWeDoCard";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import InventoryImage from "@/assets/svg/inventory.svg";
+import CustomizeImage from "@/assets/svg/customize.svg";
+import EazySetupImage from "@/assets/svg/easy-setup.svg";
+import SecurePaymentImage from "@/assets/svg/secure-payment.svg";
+import AboutImage from "@/assets/images/login-hero-hero.avif";
+import Image from "next/image";
+import CaretRightArrow from "@/components/arrow/CaretRightArrow";
 
 gsap.registerPlugin(ScrollTrigger);
 const colors = ["#FCECE5", "#e5fbfc", "#fbe5fc", "#e5e5fc"];
-const cardLists = [
-  {
-    title: "Start Managing Your Products Easily",
-    subtitle:
-      "Effortlessly manage your inventory, product listings, and shipping details with our intuitive product management tools. Keep track of your stock levels, easily update product information, and streamline your shipping process all in one place.",
-    buttonText: "Manage Products Now",
-  },
-  {
-    title: "Create Your Custom Online Store Now",
-    subtitle:
-      "Customize your online store to match your branding and product offerings with our easy-to-use website builder. Choose from a variety of customizable templates and themes, and easily add your own logo, images, and content to make your store stand out from the crowd.",
-    buttonText: "Create Your Store",
-  },
-  {
-    title: "Get Started with Our Easy Setup Process",
-    subtitle:
-      "Get your online store up and running in no time with our easy setup process. Our platform requires no technical knowledge, and our step-by-step setup guide will help you get started quickly and easily. With our platform, you can start selling your products and reaching new customers in just minutes.",
-    buttonText: "Start Selling Now",
-  },
-  {
-    title: "Start Accepting Payments Today",
-    subtitle:
-      "Offer a variety of secure and user-friendly payment options to increase customer trust and sales. Choose from a range of payment gateways, including credit/debit card, PayPal, or Stripe, and let your customers pay the way they want. Our platform also includes a simple and streamlined checkout process to ensure your customers can complete their purchase quickly and easily.",
-    buttonText: "Accept Payments Now",
-  },
-];
+// const cardLists = ;
 
 function WhatWeDo() {
-  const WhatWeDoCardRef = useRef<RefObject<HTMLDivElement>[]>(
-    Array(4)
-      .fill(null)
-      .map((element) => useRef<HTMLDivElement>(element))
-  );
-  const [isRendered, setIsRendered] = useState(false);
-  useEffect(() => {
-    setIsRendered(true);
-  }, []);
-
-  useEffect(() => {
-    const windowHeight = window.innerHeight;
-    if (isRendered) {
-      const tl = gsap.timeline();
-      tl.to("#card-container", {
-        scrollTrigger: {
-          scrub: true,
-          trigger: WhatWeDoCardRef.current[0].current,
-          start: "top 70px",
-          end: () => `${windowHeight * 4} ${windowHeight - 10*3}`,
-          pin: true,
-          pinSpacing: false,
-          // markers: true,
-        },
-      })
-        .to(WhatWeDoCardRef.current[0].current, {
-          scaleX: "0.85",
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[0].current,
-            start: "top 70px",
-            end: () => `${windowHeight * 4} ${windowHeight - 10*3}`,
-          },
-        })
-        .to("#card-container", {
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[1].current,
-            start: "top 90px",
-            end: () => `${windowHeight * 3} ${windowHeight - 10*2}`,
-            pin: true,
-            pinSpacing: false,
-            // markers: true,
-          },
-        })
-        .to(WhatWeDoCardRef.current[1].current, {
-          scaleX: "0.90",
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[1].current,
-            start: "top 90px",
-            end: () => `${windowHeight * 3} ${windowHeight - 10*2}`,
-          },
-        })
-        .to("#card-container", {
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[2].current,
-            start: "top 110px",
-            end: () => `${windowHeight * 2} ${windowHeight - 10*1}`,
-            pin: true,
-            pinSpacing: false,
-            // markers: true,
-          },
-        })
-        .to(WhatWeDoCardRef.current[2].current, {
-          scaleX: "0.95",
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[2].current,
-            start: "top 110px",
-            end: () => `${windowHeight * 2} ${windowHeight - 10*1}`,
-          },
-        })
-        .to("#card-container", {
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[3].current,
-            start: "top 130px",
-            end: () => `${windowHeight * 1} ${windowHeight - 10*0}`,
-            pin: true,
-            pinSpacing: false,
-            // markers: true,
-          },
-        })
-        .to(WhatWeDoCardRef.current[3].current, {
-          // scaleX: "0.95",
-          scrollTrigger: {
-            scrub: true,
-            trigger: WhatWeDoCardRef.current[3].current,
-            start: "top 130px",
-            end: () => `${windowHeight * 1} ${windowHeight - 10*0}`,
-          },
-        });
-    }
-  }, [isRendered]);
-
+  const [features] = useState([
+    {
+      Icon: InventoryImage,
+      title: "Effortless Product Management",
+      subtitle:
+        "Manage inventory, listings, and shipping easily with intuitive tools.",
+      buttonText: "Manage Now",
+    },
+    {
+      Icon: CustomizeImage,
+      title: "Customize Your Online Store",
+      subtitle:
+        "Match your brand and offerings with our easy-to-use website builder.",
+      buttonText: "Create Store",
+    },
+    {
+      Icon: EazySetupImage,
+      title: "Quick and Easy Setup",
+      subtitle:
+        "Get your online store running in minutes with our simple setup.",
+      buttonText: "Start Selling",
+    },
+    {
+      Icon: SecurePaymentImage,
+      title: "Accept Secure Payments",
+      subtitle: "Offer various payment options for increased trust and sales.",
+      buttonText: "Accept Payments",
+    },
+  ]);
   return (
-    <div className="w-full py-10">
-      <h2 className="title text-6xl text-outline font-semibold text-center mb-20">
-        Explore Features
-      </h2>
-      <div
-        id="card-container"
-        className="bg-white w-full grid grid-cols-1 gap-10 h-[400vh] px-[90px]"
-      >
-        {cardLists.map((cardDetails, index) => (
-          <WhatWeDoCard
-            cardDetails={cardDetails}
-            index={index}
-            color={colors[index]}
-            ref={WhatWeDoCardRef.current[index]}
-          />
-        ))}
+    <div className="w-full min-h-screen py-20">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 px-5 lg:px-28">
+        <div className="left-container lg:pr-12">
+          <h2 className="text-4xl lg:text-7xl font-semibold font-secondary">
+            Empowering <span className="font-primary font-light">your</span>{" "}
+            ambition
+          </h2>
+          <h5 className="text-2xl lg:text-4xl font-medium mt-5">
+            Get the funds you need with our hassle-free loan services, designed
+            to support your dreams and aspirations..
+          </h5>
+        </div>
+        <div className="right-container py-10 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            {features.map(({ Icon, title, subtitle, buttonText }, index) => (
+              <div
+                key={index}
+                className={`w-full p-10 min-h-72 rounded-3xl bg-purple-50 border border-gray-200 hover:shadow-2xl hover:bg-white hover:border-primary duration-500`}
+              >
+                <Image
+                  src={Icon}
+                  alt="icon_image"
+                  className="w-14 h-14 mb-5 border border-primary bg-primary rounded-full p-2.5"
+                />
+                <h4 className="text-xl font-secondary h-14">{title}</h4>
+                <p className="text-sm">{subtitle}</p>
+                <button className="h-12 mt-5 w-full text-left text-sm uppercase rounded-full text-primary">
+                  {buttonText}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

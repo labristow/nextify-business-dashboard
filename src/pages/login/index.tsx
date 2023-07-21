@@ -1,13 +1,12 @@
-import HomeNavbar from "@/components/navbar/HomeNavbar";
+import HomeLayout from "@/layouts/homepage/HomeLayout";
 import LoginLayout from "@/layouts/login/LoginLayout";
 import React from "react";
 
 function Login() {
   return (
-    <div className="w-full h-screen overflow-y-auto">
-      <HomeNavbar />
+    <HomeLayout>
       <LoginLayout />
-    </div>
+    </HomeLayout>
   );
 }
 

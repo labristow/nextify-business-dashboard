@@ -37,7 +37,7 @@ function ModalHeader({
         </div>
         <div>
           <h4 className="text-[20px] font-semibold">{title}</h4>
-          <p className="-mt-2">{subtitle}</p>
+          <p className="-mt-2 text-sm lg:text-[16px]">{subtitle}</p>
         </div>
         <button
           onClick={closeOverlay}

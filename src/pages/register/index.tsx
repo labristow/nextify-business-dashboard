@@ -1,14 +1,14 @@
 import HomeNavbar from "@/components/navbar/HomeNavbar";
+import HomeLayout from "@/layouts/homepage/HomeLayout";
 import RegisterLayout from "@/layouts/register/RegisterLayout";
 import React from "react";
 
-function Login() {
+function Register() {
   return (
-    <div className="w-full h-screen overflow-y-auto">
-      <HomeNavbar />
+    <HomeLayout>
       <RegisterLayout />
-    </div>
+    </HomeLayout>
   );
 }
 
-export default Login;
+export default Register;

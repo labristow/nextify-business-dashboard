@@ -4,6 +4,29 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+@font-face {
+  font-family: "Millik";
+  src: url("../assets/fonts/Millik.c3f91cb.ttf");
+}
+
+@font-face {
+  font-family: "Moderat";
+  src: url("../assets/fonts/Moderat-Regular.a2f5d8f.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Moderat";
+  src: url("../assets/fonts/Moderat-Medium.9a1678a.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Moderat";
+  src: url("../assets/fonts/Moderat-Bold.aef2636.ttf");
+  font-weight: 900;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -13,7 +36,7 @@ html,
 body {
   max-width: 100vw;
   /* overflow-x: hidden; */
-  font-family: "Rubik"; /* "Roboto"; */
+  font-family: "Moderat"; /* "Roboto"; */
 }
 
 @keyframes slide-up {
@@ -72,11 +95,18 @@ body {
   background-image: url("../assets/texture.svg");
   /* background-repeat: no-repeat; */
 }
-.card-background-position-right{
+.card-background-position-right {
   background-position: 100% 0;
 }
-.card-background-position-left{
+.card-background-position-left {
   background-position: 0% 0;
+}
+
+.font-secondary {
+  font-family: "Millik";
+}
+.font-tertiary {
+  font-family: "Roboto";
 }
 /* width */
 .custom__scrollbar::-webkit-scrollbar {

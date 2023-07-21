@@ -45,7 +45,7 @@ function SearchModal() {
     setSearchValue(value);
   };
   return (
-    <div className="w-[758px] rounded-lg mt-24 mx-auto bg-white min-h-[32vh]">
+    <div className="w-full lg:w-[758px] rounded-lg mt-24 mx-auto bg-white min-h-[32vh]">
       <div className="w-full relative h-[56px] px-[1.25rem] flex items-center border-b border-gray-200">
         {isLoading ? (
           <span className="w-5 h-5 rounded-full border-2 border-gray-800 border-t-transparent animate-spin"></span>

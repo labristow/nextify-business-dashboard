@@ -1,19 +1,20 @@
 import ButtonForm from "@/components/button/ButtonForm";
-import PasswordInput from "@/components/input/PasswordInput";
+import ForgetPwdImage from "@/assets/images/forget-pwd-hero.avif";
 import TextInput from "@/components/input/TextInput";
 import Link from "next/link";
 import React, { ChangeEvent, useState } from "react";
+import OnboardingLayout from "../onboarding/OnboardingLayout";
 
 function ForgetPasswordLayout() {
   const [isLoading, setIsLoading] = useState(false);
-  const [loginPayload, setLoginPayload] = useState({
+  const [forgetPwdPayload, setForgetPwdPayload] = useState({
     email: "",
     password: "",
   });
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = e.target;
-    setLoginPayload({
-      ...loginPayload,
+    setForgetPwdPayload({
+      ...forgetPwdPayload,
       [name]: value,
     });
   };
@@ -25,13 +26,14 @@ function ForgetPasswordLayout() {
       setIsLoading(false);
     }, 3000);
   };
+
   return (
-    <div className="w-full flex justify-center items-center pt-28">
-      <div className="w-[610px] h-[340px] px-16 py-8 bg-white hover:shadow-md duration-700 bg-opacity-60 border border-gray-100 rounded-xl">
-        <h4 className="text-3xl font-medium text-primary-dark">
-          Forgot your password?
+    <OnboardingLayout backgroundImage={ForgetPwdImage}>
+      <React.Fragment>
+        <h4 className="text-3xl font-semibold text-primary-dark">
+          Forget your password
         </h4>
-        <p className="text-gray-400 text-xl">Reset the password here</p>
+        <p>Retrieve your password in few simple steps</p>
 
         <div className="flex flex-col gap-5 mt-10">
           <TextInput
@@ -39,7 +41,7 @@ function ForgetPasswordLayout() {
             placeholder="Enter your email address"
             name="email"
             type="text"
-            value={loginPayload.email}
+            value={forgetPwdPayload.email}
             onChange={handleInputChange}
           />
 
@@ -62,8 +64,8 @@ function ForgetPasswordLayout() {
             />
           </div>
         </div>
-      </div>
-    </div>
+      </React.Fragment>
+    </OnboardingLayout>
   );
 }
 

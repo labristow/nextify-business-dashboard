@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
+import HeroImg2 from "@/assets/images/login-hero-hero.avif";
+import OnboardingLayout from "../onboarding/OnboardingLayout";
 
 function LoginLayout() {
   const router = useRouter();
@@ -30,13 +32,14 @@ function LoginLayout() {
       router.push("/home");
     }, 3000);
   };
+
   return (
-    <div className="w-full flex justify-center items-center pt-20">
-      <div className="w-[610px] h-[420px] px-16 py-8 bg-white hover:shadow-md duration-700 bg-opacity-60 border border-gray-100 rounded-xl">
-        <h4 className="text-3xl font-medium text-primary-dark">
+    <OnboardingLayout backgroundImage={HeroImg2}>
+      <React.Fragment>
+        <h4 className="text-3xl font-semibold text-primary-dark">
           Welcome, back
         </h4>
-        <p className="text-gray-400 text-xl">Sign in to continue</p>
+        <p>Sign in to continue</p>
 
         <div className="flex flex-col gap-5 mt-10">
           <TextInput
@@ -82,8 +85,8 @@ function LoginLayout() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </React.Fragment>
+    </OnboardingLayout>
   );
 }
 
