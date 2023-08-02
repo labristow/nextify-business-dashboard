@@ -1,23 +1,29 @@
-
 import ColorPicker from "@/components/color-picker/ColorPicker";
 import React from "react";
 
 interface BrandColorSelection {
-  websiteSetting: { brandColor: string };
-  toggleAccordion: (index: number) => void;
-  accordionTabIndex: number;
-  handleColorSelect: (color: string) => void;
-  removeSelectedColor: () => void;
+  title: string;
+  subTitle: string;
+  value: string;
+  name: string;
+  handleColorSelect: (color: string, name: string) => void;
+  removeSelectedColor: (name: string) => void;
 }
 function BrandColorSelection({
-  websiteSetting,
+  title,
+  subTitle,
+  value,
+  name,
   handleColorSelect,
   removeSelectedColor,
 }: BrandColorSelection) {
   return (
     <div className={`w-full duration-500 overflow-hidden accordion-body`}>
       <ColorPicker
-        selectedColor={websiteSetting.brandColor}
+        title={title}
+        subTitle={subTitle}
+        name={name}
+        selectedColor={value}
         onSelect={handleColorSelect}
         removeSelectedColor={removeSelectedColor}
       />

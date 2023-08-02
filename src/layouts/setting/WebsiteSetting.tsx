@@ -10,9 +10,9 @@ import { SelectChangeEvent } from "@mui/material";
 
 function WebsiteSetting() {
   const brandLogoRef = useRef<any>("");
-  const [accordionTabIndex, setAccordionTabIndex] = useState<number>(-1);
   const [websiteSetting, setWebsiteSetting] = useState({
-    brandColor: "",
+    brandFGColor: "",
+    brandBGColor: "",
     theme: "",
     brandLogo: "",
     analyticsId: "",
@@ -43,19 +43,11 @@ function WebsiteSetting() {
     }
   };
 
-  const handleColorSelect = (color: string) => {
+  const handleColorSelect = (color: string, name: string) => {
     setWebsiteSetting({
       ...websiteSetting,
-      brandColor: color,
+      [name]: color,
     });
-  };
-
-  const toggleAccordion = (id: number) => {
-    if (id === accordionTabIndex) {
-      setAccordionTabIndex(-1);
-    } else {
-      setAccordionTabIndex(id);
-    }
   };
 
   const handleToggle = (value: boolean, name: string) => {
@@ -65,8 +57,8 @@ function WebsiteSetting() {
     });
   };
 
-  const removeSelectedColor = () =>
-    setWebsiteSetting({ ...websiteSetting, brandColor: "" });
+  const removeSelectedColor = (name: string) =>
+    setWebsiteSetting({ ...websiteSetting, [name]: "" });
 
   const saveHandler = () => {
     alert(JSON.stringify(websiteSetting));
@@ -140,11 +132,21 @@ function WebsiteSetting() {
           </div>
 
           <BrandColorSelection
-            websiteSetting={websiteSetting}
-            toggleAccordion={toggleAccordion}
-            accordionTabIndex={accordionTabIndex}
+            name="brandFGColor"
+            value={websiteSetting.brandFGColor}
             handleColorSelect={handleColorSelect}
             removeSelectedColor={removeSelectedColor}
+            title="Brand foreground color"
+            subTitle="Select your brand foreground color"
+          />
+
+          <BrandColorSelection
+            name="brandBGColor"
+            value={websiteSetting.brandBGColor}
+            handleColorSelect={handleColorSelect}
+            removeSelectedColor={removeSelectedColor}
+            title="Brand background color"
+            subTitle="Select your brand background color"
           />
         </div>
         <div className="w-full lg:w-[400px] pt-8">

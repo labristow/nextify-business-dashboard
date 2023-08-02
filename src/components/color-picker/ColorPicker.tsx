@@ -60,11 +60,17 @@ const colors = [
 ];
 
 interface IProps {
+  title?: string;
+  subTitle?: string;
+  name: string;
   selectedColor: string;
-  onSelect: (color: string) => void;
-  removeSelectedColor: () => void;
+  onSelect: (color: string, name: string) => void;
+  removeSelectedColor: (name: string) => void;
 }
 const ColorPicker = ({
+  title = "Brand Color",
+  subTitle = "Select your brand color",
+  name,
   selectedColor,
   onSelect,
   removeSelectedColor,
@@ -76,21 +82,21 @@ const ColorPicker = ({
       /^rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})(, ?[\d.]+)?\)$/;
 
     if (hexColorRegex.test(value) || rgbColorRegex.test(value)) {
-      onSelect(value);
+      onSelect(value, name);
     } else {
-      onSelect("");
+      onSelect("", name);
     }
   };
   return (
     <div className="w-full">
       <div className="flex items-center h-12 gap-2 mb-5">
         <div className="">
-          <p className="text-lg font-medium">Brand Color</p>
-          <p className="-mt-1.5 text-sm font-medium">Select your brand color</p>
+          <p className="text-lg font-medium">{title}</p>
+          <p className="-mt-1.5 text-sm font-medium">{subTitle}</p>
         </div>
         <div className="inline-block border border-gray-300 p-0.5 shadow rounded-full">
           <div
-            onClick={removeSelectedColor}
+            onClick={() => removeSelectedColor(name)}
             className="group rounded-full"
             style={{
               backgroundColor: selectedColor,
@@ -111,7 +117,7 @@ const ColorPicker = ({
             className="w-6 h-6 rounded-full"
             key={index}
             style={{ backgroundColor: color }}
-            onClick={() => onSelect(color)}
+            onClick={() => onSelect(color, name)}
           ></button>
         ))}
       </div>
