@@ -10,6 +10,7 @@ interface IProps {
   subtitle?: string;
   Icon?: any;
   hasBackground?: boolean;
+  hideCloseBtn?: boolean;
 }
 
 function ModalHeader({
@@ -17,6 +18,7 @@ function ModalHeader({
   subtitle = "Share where you've worked on your profile",
   Icon,
   hasBackground = false,
+  hideCloseBtn = false,
 }: IProps) {
   const dispatch = useDispatch();
   const closeOverlay = () => {
@@ -37,14 +39,16 @@ function ModalHeader({
         </div>
         <div>
           <h4 className="text-[20px] font-semibold">{title}</h4>
-          <p className="-mt-2 text-sm lg:text-[16px]">{subtitle}</p>
+          <p className="text-sm lg:text-[16px]">{subtitle}</p>
         </div>
-        <button
-          onClick={closeOverlay}
-          className="close-btn hover:bg-gray-100 transition-all duration-300 absolute right-5 top-5"
-        >
-          <SVGS.CloseIcon size="28" />
-        </button>
+        {!hideCloseBtn && (
+          <button
+            onClick={closeOverlay}
+            className="close-btn hover:bg-gray-100 transition-all duration-300 absolute right-5 top-5"
+          >
+            <SVGS.CloseIcon size="28" />
+          </button>
+        )}
       </div>
     </React.Fragment>
   );

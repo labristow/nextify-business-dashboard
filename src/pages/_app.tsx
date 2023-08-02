@@ -11,7 +11,7 @@ const dashboardPages = [
   "/home",
   "/products",
   "/orders",
-  "/transactions",
+  "/customers",
   "/profile",
   "/setting",
 ];

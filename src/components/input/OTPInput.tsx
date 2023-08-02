@@ -38,7 +38,7 @@ function OTPInput({
             ref={(ref) => (inputRef.current[index] = ref)}
             onChange={(event) => handleInputChange(event, index)}
             placeholder="*"
-            type="text"
+            type="number"
             className="w-20 flex-shrink-0 h-[85px] focus:border-gray-700 outline-none duration-500 text-center font-bold text-5xl border-2 border-gray-300 rounded-md"
           />
         ))}

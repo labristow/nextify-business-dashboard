@@ -7,6 +7,7 @@ import React, { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
 import HeroImg2 from "@/assets/images/login-hero-hero.avif";
 import OnboardingLayout from "../onboarding/OnboardingLayout";
+import userData from "../../mock/merchant.json";
 
 function LoginLayout() {
   const router = useRouter();
@@ -24,13 +25,22 @@ function LoginLayout() {
   };
 
   const handleSubmit = () => {
-    setIsLoading(true);
-
-    setTimeout(() => {
-      toast.success("Login successfully");
-      setIsLoading(false);
-      router.push("/home");
-    }, 3000);
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!loginPayload.email) {
+      toast.error("Email address is required");
+    } else if (!loginPayload.password) {
+      toast.error("Password is required");
+    } else if (!emailRegex.test(loginPayload.email)) {
+      toast.error("Invalid email address");
+    } else {
+      setIsLoading(true);
+      setTimeout(() => {
+        window.sessionStorage.setItem("userData", JSON.stringify(userData));
+        toast.success("Login successfully");
+        setIsLoading(false);
+        router.push("/home");
+      }, 3000);
+    }
   };
 
   return (

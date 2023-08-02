@@ -7,7 +7,7 @@ const menulist = [
   { text: "Dashboard", Icon: SVGS.HomeIcon, link: "/home" },
   { text: "Products", Icon: SVGS.ProductIcon, link: "/products" },
   { text: "Manage Orders", Icon: SVGS.OrderIcon, link: "/orders" },
-  { text: "Transactions", Icon: SVGS.TransactionIcon, link: "/transactions" },
+  { text: "Customers", Icon: SVGS.ProfileIcon, link: "/customers" },
   { text: "My Profile", Icon: SVGS.ProfileIcon, link: "/profile" },
   { text: "Setting", Icon: SVGS.SettingIcon, link: "/setting" },
 ];

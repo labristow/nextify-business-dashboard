@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "email": "blessing1@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 3
+  },
+  {
+    "id": 2,
+    "email": "blessing2@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 1
+  },
+  {
+    "id": 3,
+    "email": "blessing3@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 2
+  },
+  {
+    "id": 4,
+    "email": "blessing4@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 5
+  },
+  {
+    "id": 5,
+    "email": "blessing5@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 8
+  },
+  {
+    "id": 6,
+    "email": "blessing6@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 2
+  },
+  {
+    "id": 7,
+    "email": "blessing7@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 1
+  },
+  {
+    "id": 8,
+    "email": "blessing8@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 1
+  },
+  {
+    "id": 9,
+    "email": "blessing9@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 12
+  },
+  {
+    "id": 10,
+    "email": "blessing10@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 10
+  },
+  {
+    "id": 11,
+    "email": "blessing11@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 7
+  },
+  {
+    "id": 12,
+    "email": "blessing12@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 4
+  },
+  {
+    "id": 13,
+    "email": "blessing13@gmial.com",
+    "phoneNumber": "2348148331698",
+    "name": "Blessing Ladejobi",
+    "joinedDate": "24th of August 2022",
+    "frequency": 2
+  }
+]

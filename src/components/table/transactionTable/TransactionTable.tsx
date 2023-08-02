@@ -1,11 +1,15 @@
 import React from "react";
-import data from "@/components/table/transactionTable/data.json";
+import data from "@/mock/transactions.json";
 import TableTop from "@/components/table/shared/TableTop";
 import TablePartition from "../shared/TablePartition";
 import { useDispatch } from "react-redux";
 import { showOverlay } from "@/features/overlay/overlaySlice";
 
-function TransactionTable() {
+function TransactionTable({
+  title = "Recent transactions",
+}: {
+  title?: string;
+}) {
   const dispatch = useDispatch();
   const showDetailsHandler = (transaction: any) => {
     // alert(JSON.stringify(transaction));
@@ -18,7 +22,7 @@ function TransactionTable() {
   };
   return (
     <div className="w-full overflow-x-auto bg-white h-[80vh] border border-gray-200 rounded-xl px-5 lg:px-8 py-3">
-      <TableTop link={"#"} title={"Recent transactions"} />
+      <TableTop link={"#"} title={title} />
       <div className="w-full  min-w-[350px] h-[calc(80vh_-_150px)] overflow-y-scroll custom__scrollbar pr-6">
         {data.transactions.today && (
           <TablePartition

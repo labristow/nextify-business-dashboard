@@ -6,6 +6,8 @@ import UpdateProduct from "../modal/UpdateProduct";
 import ViewOrder from "../modal/ViewOrder";
 import ViewTransaction from "../modal/ViewTransaction";
 import SearchModal from "../search/SearchModal";
+import SetPin from "../modal/SetPin";
+import LockScreen from "../modal/LockScreen";
 
 function OverlayContainer() {
   const overlay = useSelector((state: any) => state.overlay);
@@ -19,7 +21,9 @@ function OverlayContainer() {
     }
   };
   const modalShouldNotCloseOnOverlayClick =
-    overlay.name === "search-navigation-overlay";
+    overlay.name === "search-navigation-overlay" ||
+    overlay.name === "set-pin-overlay";
+
   const doNothing = () => null;
   return (
     <React.Fragment>
@@ -40,6 +44,8 @@ function OverlayContainer() {
             <ViewTransaction data={overlay.data} />
           )}
           {overlay.name === "search-navigation-overlay" && <SearchModal />}
+          {overlay.name === "set-pin-overlay" && <SetPin />}
+          {overlay.name === "lock-screen-overlay" && <LockScreen />}
         </div>
       )}
     </React.Fragment>

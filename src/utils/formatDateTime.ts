@@ -52,7 +52,7 @@ export const formatDateTime = (dateTime: string) => {
       month = "June";
       break;
     case 6:
-      month = "Jully";
+      month = "July";
       break;
     case 7:
       month = "August";

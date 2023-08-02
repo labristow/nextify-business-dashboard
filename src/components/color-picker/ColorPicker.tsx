@@ -83,8 +83,11 @@ const ColorPicker = ({
   };
   return (
     <div className="w-full">
-      <div className="flex items-center h-12 gap-2">
-        <p className="text-sm font-medium">Select your brand color</p>
+      <div className="flex items-center h-12 gap-2 mb-5">
+        <div className="">
+          <p className="text-lg font-medium">Brand Color</p>
+          <p className="-mt-1.5 text-sm font-medium">Select your brand color</p>
+        </div>
         <div className="inline-block border border-gray-300 p-0.5 shadow rounded-full">
           <div
             onClick={removeSelectedColor}

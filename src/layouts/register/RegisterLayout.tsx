@@ -28,6 +28,9 @@ function RegisterLayout() {
   };
 
   const handleSubmit = () => {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+
     if (!loginPayload.businessName) {
       toast.error("Business name is required");
     } else if (!loginPayload.email) {
@@ -36,6 +39,12 @@ function RegisterLayout() {
       toast.error("Fullname is required");
     } else if (!loginPayload.password) {
       toast.error("Password is required");
+    } else if (!emailPattern.test(loginPayload.email)) {
+      toast.error("Invalid email entered");
+    } else if (!passwordPattern.test(loginPayload.password)) {
+      toast.error(
+        "Password must contain atleast 1 of lowercase, uppercase, digit and symbol"
+      );
     } else {
       setIsLoading(true);
 

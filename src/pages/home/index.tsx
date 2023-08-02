@@ -9,12 +9,12 @@ const greetingMessages = [
   "Wishing you a wonderful morning!",
   "Sending you warm greetings!",
   "May your day be filled with joy and happiness!",
-  "Hello! I hope you're doing well.",
+  "I hope you're doing well.",
   "Good to see you! Have a fantastic day!",
   "Greetings and best wishes to you!",
   "Sending positive vibes your way!",
   "Wishing you a successful and productive day!",
-  "Hello! Trust you are good today!",
+  "Trust you are good today!",
 ];
 
 function Index({ greetingIndex }: { greetingIndex: number }) {

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { useState } from "react";
 import ModalHeader from "../header/ModalHeader";
 import { SVGS } from "@/assets/SVGS";
 import { formatDateTime } from "@/utils/formatDateTime";
@@ -6,6 +6,7 @@ import Image from "next/image";
 import TextSelect from "../select/TextSelect";
 import { SelectChangeEvent } from "@mui/material";
 import { toast } from "react-hot-toast";
+import Link from "next/link";
 
 interface Product {
   id: number;
@@ -102,7 +103,7 @@ function ViewOrder({ data }: { data: Order }) {
                 updatedStatus === "cancelled" && "bg-gray-100 text-gray-700"
               } ${
                 updatedStatus === "failed" && "bg-red-100 text-red-700"
-              } p-2 mx-1 text-sm rounded-full capitalize`}
+              } p-2 mx-1 text-[13px] rounded-full capitalize`}
             >
               {updatedStatus || data.status}
             </span>
@@ -113,7 +114,7 @@ function ViewOrder({ data }: { data: Order }) {
           {data.products.map(({ name, quantity, price, id, image }, index) => (
             <div key={index} className="flex items-center justify-between">
               <div className="flex items-center gap-x-4">
-                <div className="avatar w-[58px] h-[58px] rounded-md bg-gray-100 border border-gray-300">
+                <div className="avatar w-[48px] h-[48px] rounded-md bg-gray-100 border border-gray-300">
                   {image && <Image src={image} alt="product_image" />}
                 </div>
                 <div>
@@ -133,12 +134,14 @@ function ViewOrder({ data }: { data: Order }) {
                     Qty: {quantity}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  className="w-5 flex items-center rotate-90"
-                >
-                  <SVGS.OutLinkIcon />
-                </button>
+                <Link href={""} target="_blank">
+                  <button
+                    type="button"
+                    className="w-5 flex items-center rotate-90"
+                  >
+                    <SVGS.OutLinkIcon />
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

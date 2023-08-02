@@ -1,7 +1,7 @@
 import OrderSetting from "@/layouts/setting/OrderSetting";
 import SettingHeader from "@/layouts/setting/SettingHeader";
 import SocialMediaSetting from "@/layouts/setting/SocialMediaSetting";
-import TermsOfUse from "@/layouts/setting/TermsOfUse";
+import APIKeys from "@/layouts/setting/APIKeys";
 import WebsiteSetting from "@/layouts/setting/WebsiteSetting";
 import React, { useState } from "react";
 
@@ -23,10 +23,10 @@ function Index() {
       Content: SocialMediaSetting,
     },
     {
-      text: "Terms of use",
+      text: "API Keys",
       count: -1,
-      name: "terms-of-service",
-      Content: TermsOfUse,
+      name: "api-keys",
+      Content: APIKeys,
     },
     {
       text: "Order settings",
