@@ -18,6 +18,7 @@ function WebsiteSetting() {
     analyticsId: "",
     showTopbar: false,
     topbarMessage: "",
+    headline: "Start your day with happiness, brewed for you.",
   });
 
   const handleSelectChange = (e: SelectChangeEvent) => {
@@ -187,6 +188,17 @@ function WebsiteSetting() {
               value=""
               rows={4}
               isMultiLine={true}
+            />
+          </div>
+          <hr className="w-full my-5" />
+          <div className="my-5">
+            <TextInput
+              type="text"
+              label="Headerline"
+              name="headline"
+              onChange={handleChange}
+              placeholder="Enter your store headline message"
+              value={websiteSetting.headline}
             />
           </div>
         </div>
