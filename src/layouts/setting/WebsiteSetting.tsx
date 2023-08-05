@@ -1,6 +1,4 @@
 import { SVGS } from "@/assets/SVGS";
-import ButtonForm from "@/components/button/ButtonForm";
-import ColorPicker from "@/components/color-picker/ColorPicker";
 import TextInput from "@/components/input/TextInput";
 import TextSelect from "@/components/select/TextSelect";
 import React, { useRef, useState } from "react";
@@ -10,11 +8,13 @@ import { SelectChangeEvent } from "@mui/material";
 
 function WebsiteSetting() {
   const brandLogoRef = useRef<any>("");
+  const heroImageRef = useRef<any>("");
   const [websiteSetting, setWebsiteSetting] = useState({
     brandFGColor: "",
     brandBGColor: "",
     theme: "",
     brandLogo: "",
+    heroImage: "",
     analyticsId: "",
     showTopbar: false,
     topbarMessage: "",
@@ -90,6 +90,8 @@ function WebsiteSetting() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5">
         <div className="w-full lg:w-[400px] pt-8">
           <div className="my-5">
+            <h5 className="font-semibold">Website Template</h5>
+            <p className="mb-5">Select theme that best align with your business?</p>
             <TextSelect
               onChange={handleSelectChange}
               label="Select Website Theme"
@@ -102,36 +104,71 @@ function WebsiteSetting() {
               ]}
             />
           </div>
-
-          <div className="my-5 flex items-center justify-start gap-x-5">
-            <input
-              // value={websiteSetting.brandLogo}
-              ref={brandLogoRef}
-              onChange={handleChange}
-              type="file"
-              name="brandLogo"
-              className="hidden"
-            />
-            <button
-              onClick={() =>
-                brandLogoRef.current && brandLogoRef.current.click()
-              }
-              className="w-full min-w-[200px] h-14 rounded bg-primary-blue_ text-black flex items-center justify-start"
-              type="button"
-            >
-              <SVGS.ImageIcon color="#000000" /> Upload brand logo
-            </button>
-            {websiteSetting.brandLogo && (
-              <div className="w-[70px] h-[70px] border border-gray-300 rounded flex flex-shrink-0 items-center justify-center">
-                <img
-                  className="w-full h-full object-cover"
-                  src={websiteSetting.brandLogo}
-                  alt=""
-                />
-              </div>
-            )}
+          <hr className="w-full my-5" />
+          <div>
+            <h5 className="font-semibold">Brand Logo</h5>
+            <p>Upload your business logo?</p>
+            <div className="my- flex items-center justify-start gap-x-5">
+              <input
+                ref={brandLogoRef}
+                onChange={handleChange}
+                type="file"
+                name="brandLogo"
+                className="hidden"
+              />
+              <button
+                onClick={() =>
+                  brandLogoRef.current && brandLogoRef.current.click()
+                }
+                className="w-full min-w-[200px] h-14 rounded bg-primary-blue_ text-black flex items-center justify-start"
+                type="button"
+              >
+                <SVGS.ImageIcon color="#000000" /> Click here to upload
+              </button>
+              {websiteSetting.brandLogo && (
+                <div className="w-[70px] h-[70px] border border-gray-300 rounded flex flex-shrink-0 items-center justify-center">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={websiteSetting.brandLogo}
+                    alt=""
+                  />
+                </div>
+              )}
+            </div>
           </div>
-
+          <hr className="w-full my-5" />
+          <div>
+            <h5 className="font-semibold">Hero Image</h5>
+            <p>Upload your store hero image?</p>
+            <div className="my- flex items-center justify-start gap-x-5">
+              <input
+                ref={heroImageRef}
+                onChange={handleChange}
+                type="file"
+                name="heroImage"
+                className="hidden"
+              />
+              <button
+                onClick={() =>
+                  heroImageRef.current && heroImageRef.current.click()
+                }
+                className="w-full min-w-[200px] h-14 rounded bg-primary-blue_ text-black flex items-center justify-start"
+                type="button"
+              >
+                <SVGS.ImageIcon color="#000000" /> Click here to upload
+              </button>
+              {websiteSetting.heroImage && (
+                <div className="w-[70px] h-[70px] border border-gray-300 rounded flex flex-shrink-0 items-center justify-center">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={websiteSetting.heroImage}
+                    alt=""
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          <hr className="w-full my-5" />
           <BrandColorSelection
             name="brandFGColor"
             value={websiteSetting.brandFGColor}
@@ -140,7 +177,7 @@ function WebsiteSetting() {
             title="Brand foreground color"
             subTitle="Select your brand foreground color"
           />
-
+          <hr className="w-full my-5" />
           <BrandColorSelection
             name="brandBGColor"
             value={websiteSetting.brandBGColor}
