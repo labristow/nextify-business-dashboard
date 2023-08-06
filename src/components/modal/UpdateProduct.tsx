@@ -145,8 +145,9 @@ function UpdateProduct({ data }: { data: IProductProps }) {
             onChange={handleChange}
           />
         </div>
-        <div className="mt-3">
+        <div className="mt-3 relative">
           <TextareaInput
+            rows={8}
             value={productData.description}
             onChange={handleChange}
             name="description"

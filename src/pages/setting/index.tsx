@@ -4,6 +4,7 @@ import SocialMediaSetting from "@/layouts/setting/SocialMediaSetting";
 import APIKeys from "@/layouts/setting/APIKeys";
 import WebsiteSetting from "@/layouts/setting/WebsiteSetting";
 import React, { useState } from "react";
+import ProductSetting from "@/layouts/setting/ProductSetting";
 
 function Index() {
   const [activeStatus, setActiveStatus] = useState("website-settings");
@@ -27,6 +28,12 @@ function Index() {
       count: -1,
       name: "api-keys",
       Content: APIKeys,
+    },
+    {
+      text: "Product settings",
+      count: -1,
+      name: "product-settings",
+      Content: ProductSetting,
     },
     {
       text: "Order settings",
