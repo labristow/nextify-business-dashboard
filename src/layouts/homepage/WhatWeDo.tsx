@@ -6,7 +6,7 @@ import InventoryImage from "@/assets/svg/inventory.svg";
 import CustomizeImage from "@/assets/svg/customize.svg";
 import EazySetupImage from "@/assets/svg/easy-setup.svg";
 import SecurePaymentImage from "@/assets/svg/secure-payment.svg";
-import AboutImage from "@/assets/images/login-hero-hero.avif";
+import AboutImage from "@/assets/images/login-hero-hero.png";
 import Image from "next/image";
 import CaretRightArrow from "@/components/arrow/CaretRightArrow";
 

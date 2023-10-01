@@ -2,7 +2,7 @@ import { Power3, gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import HeroImg1 from "@/assets/images/login-hero-hero.avif";
+import HeroImg1 from "@/assets/images/login-hero-hero.png";
 import HeroImg2 from "@/assets/images/register-bg-image.jpg";
 import { splitWordsToCharacters } from "@/utils/splitWords";
 import CaretRightArrow from "@/components/arrow/CaretRightArrow";

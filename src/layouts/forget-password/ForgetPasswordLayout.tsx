@@ -1,5 +1,5 @@
 import ButtonForm from "@/components/button/ButtonForm";
-import ForgetPwdImage from "@/assets/images/forget-pwd-hero.avif";
+import ForgetPwdImage from "@/assets/images/forget-pwd-hero.png";
 import TextInput from "@/components/input/TextInput";
 import Link from "next/link";
 import React, { ChangeEvent, useState } from "react";

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
-import HeroImg2 from "@/assets/images/login-hero-hero.avif";
+import HeroImg2 from "@/assets/images/login-hero-hero.png";
 import OnboardingLayout from "../onboarding/OnboardingLayout";
 import userData from "../../mock/merchant.json";
 
