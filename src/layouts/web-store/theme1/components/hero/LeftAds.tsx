@@ -28,7 +28,7 @@ function LeftAds() {
 
         <ul className="flex flex-col gap-5 mt-5">
           {sideMenu.map(({ Icon, name, link }, id) => (
-            <Link href={link}>
+            <Link href={link} key={id}>
               <li key={id} className="flex items-center">
                 {Icon}
                 {name}

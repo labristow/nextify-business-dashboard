@@ -81,7 +81,7 @@ function SocialTestimonials() {
           {Array(2)
             .fill("")
             .map((__: any, index: number) => (
-              <div className="flex justify-start items-start gap-x-8">
+              <div key={index} className="flex justify-start items-start gap-x-8">
                 {testimonials.map(
                   ({ name, username, message }: Comment, id: number) => (
                     <div

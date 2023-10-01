@@ -13,7 +13,7 @@ function Partners() {
         {Array(5)
           .fill("")
           .map((_, id) => (
-            <div className="w-[150px] lg:w-[180px] h-[110px] flex items-center justify-center border border-gray-300 rounded-xl">
+            <div key={id} className="w-[150px] lg:w-[180px] h-[110px] flex items-center justify-center border border-gray-300 rounded-xl">
               <Image
                 width="64"
                 height="64"
