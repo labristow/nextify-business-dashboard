@@ -2,7 +2,7 @@ import { Power3, gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import HeroImg1 from "@/assets/images/login-hero-hero.png";
+import HeroImg1 from "../../assets/images/login-hero-hero.png";
 import HeroImg2 from "@/assets/images/register-bg-image.jpg";
 import { splitWordsToCharacters } from "@/utils/splitWords";
 import CaretRightArrow from "@/components/arrow/CaretRightArrow";
@@ -105,7 +105,7 @@ function Hero() {
         <div className="px-5 lg:px-32 pt-16">
           <h2
             ref={titleRef}
-            className="text-3xl lg:text-8xl font-secondary font-semibold"
+            className="text-3xl md:text-5xl lg:text-8xl font-secondary font-semibold"
           >
             <div className="h-auto lg:h-24 overflow-hidden flex items-center">
               {splitWordsToCharacters("Launch")}
@@ -140,14 +140,14 @@ function Hero() {
             </span>
           </h4>
 
-          <div className="flex flex-wrap lg:flex-nowrap items-center gap-2 lg:gap-5">
-            <Link href={"/register"} className="w-full lg:w-auto">
-              <button className="w-full lg:w-auto h-[70px] px-8 group rounded-xl font-medium bg-primary-blue text-white flex items-center justify-center">
+          <div className="flex flex-wrap md:flex-nowrap items-center gap-2 md:gap-5">
+            <Link href={"/register"} className="w-full md:w-auto">
+              <button className="w-full md:w-auto h-[70px] px-8 group rounded-xl font-medium bg-primary-blue text-white flex items-center justify-center">
                 Get started now <CaretRightArrow color="white" />
               </button>
             </Link>
-            <Link href={"/login"} className="w-full lg:w-auto">
-              <button className="w-full lg:w-auto h-[70px] px-8 group rounded-xl font-medium bg-gray-200 text-gray-900 flex items-center justify-center">
+            <Link href={"/login"} className="w-full md:w-auto">
+              <button className="w-full md:w-auto h-[70px] px-8 group rounded-xl font-medium bg-gray-200 text-gray-900 flex items-center justify-center">
                 Explore more <CaretRightArrow />
               </button>
             </Link>
@@ -155,7 +155,7 @@ function Hero() {
         </div>
       </div>
       <div className="w-full lg:min-h-screen hero-images-container">
-        <div className="grid px-5 lg:grid-cols-11 gap-10">
+        <div className="grid px-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-11 gap-10">
           <div className="lg:col-span-6">
             <div className="w-full overflow-hidden hero-image-1-wrapper relative">
               <div
@@ -166,7 +166,7 @@ function Hero() {
                 src={HeroImg1}
                 alt=""
                 id="hero-image-1"
-                className="relative z-10"
+                className="relative z-10 w-full"
               />
             </div>
             {/* Embrace limitless possibilities as our platform empowers
@@ -190,7 +190,7 @@ function Hero() {
                 src={HeroImg2}
                 alt=""
                 id="hero-image-2"
-                className="relative z-10"
+                className="relative z-10 w-full"
               />
             </div>
           </div>
