@@ -8,6 +8,7 @@ import ViewTransaction from "../modal/ViewTransaction";
 import SearchModal from "../search/SearchModal";
 import SetPin from "../modal/SetPin";
 import LockScreen from "../modal/LockScreen";
+import AddProductCategory from "../modal/AddProductCategory";
 
 function OverlayContainer() {
   const overlay = useSelector((state: any) => state.overlay);
@@ -34,6 +35,9 @@ function OverlayContainer() {
         >
           {/* {JSON.stringify(overlay)} */}
           {overlay.name === "add-product-overlay" && <AddProduct />}
+          {overlay.name === "add-product-category-overlay" && (
+            <AddProductCategory />
+          )}
           {overlay.name === "update-product-overlay" && (
             <UpdateProduct data={overlay.data} />
           )}

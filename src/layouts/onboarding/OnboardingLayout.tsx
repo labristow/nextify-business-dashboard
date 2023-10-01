@@ -54,7 +54,7 @@ function OnboardingLayout({
             className="relative w-full h-full object-cover z-10"
           />
         </div>
-        <div className="w-full relative px-5 lg:px-10 pb-20 lg:pb-0 pt-40 flex flex-col justify-center bg-white">
+        <div className="w-full relative px-5 lg:px-10 pb-20 lg:pb-0 pt-40 md:pt-52 flex flex-col justify-center md:justify-start bg-white">
           <div
             id="onboard-form-cover"
             className="w-full h-full bg-white absolute z-20 left-0 top-0"

@@ -62,7 +62,7 @@ function WhatWeDo() {
             {features.map(({ Icon, title, subtitle, buttonText }, index) => (
               <div
                 key={index}
-                className={`w-full p-10 min-h-72 rounded-3xl bg-purple-50 border border-gray-200 hover:shadow-2xl hover:bg-white hover:border-primary duration-500`}
+                className={`group w-full p-10 min-h-72 rounded-3xl bg-white border border-gray-200 hover:shadow-2xl hover:bg-purple-50 hover:border-primary duration-500`}
               >
                 <Image
                   src={Icon}
@@ -71,7 +71,7 @@ function WhatWeDo() {
                 />
                 <h4 className="text-xl font-secondary h-14">{title}</h4>
                 <p className="text-sm">{subtitle}</p>
-                <button className="h-12 mt-5 w-full text-left text-sm uppercase rounded-full text-primary">
+                <button className="border px-6 inline-block h-12 mt-5 group-hover:bg-primary duration-500 text-left text-sm uppercase rounded-full group-hover:text-white hover:animate-pulse">
                   {buttonText}
                 </button>
               </div>

@@ -27,6 +27,7 @@ function SetPin() {
         window.sessionStorage.setItem("userData", JSON.stringify(newUserData));
         toast.success("PIN setup successfully.");
         dispatch(hideOverlay());
+        window.location.reload();
       }
     } else if (pin === "") {
       toast.error("PIN is required");

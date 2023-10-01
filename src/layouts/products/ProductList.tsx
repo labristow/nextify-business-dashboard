@@ -4,7 +4,7 @@ import { IProductProps } from "@/pages/products";
 
 function ProductList({currentProducts}: {currentProducts: IProductProps[]}) {
   return (
-    <div className="flex bg-white p-5 flex-wrap 2xl:grid 2xl:grid-cols-4 items-start gap-5 h-[calc(100vh_-_40vh)] overflow-y-auto">
+    <div className="flex bg-white p-5 flex-wrap 2xl:grid 2xl:grid-cols-4 items-start gap-5 min-h-[calc(100vh_-_46vh)] overflow-y-auto">
       {currentProducts.map((product, index) => (
         <ProductCard key={index} {...product} />
       ))}

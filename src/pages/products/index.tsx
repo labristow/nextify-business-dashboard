@@ -2,6 +2,8 @@ import ProductHeader from "@/layouts/products/ProductHeader";
 import ProductList from "@/layouts/products/ProductList";
 import React, { useEffect, useState } from "react";
 import productsData from "@/mock/products.json";
+import ProductNavigation from "@/layouts/products/ProductNavigation";
+import ProductCategory from "@/layouts/products/ProductCategory";
 
 export interface IProductProps {
   id?: string;
@@ -24,6 +26,7 @@ export interface IProductStatusProps {
 
 function Index() {
   const [activeStatus, setActiveStatus] = useState("active");
+  const [showCategories, setShowCatgories] = useState<boolean>(false);
   const [products, setProducts] = useState<IProductProps[]>([]);
   const [currentProducts, setCurrentProducts] = useState<IProductProps[]>([]);
   const [metrics, setMetrics] = useState<IProductStatusProps>({
@@ -32,6 +35,7 @@ function Index() {
     draft: 0,
     discount: 0,
   });
+
   useEffect(() => {
     setProducts(productsData);
   }, []);
@@ -48,6 +52,7 @@ function Index() {
       setCurrentProducts(matchedProduct);
     }
   };
+
   useEffect(() => {
     let _metrics = {
       all: 0,
@@ -81,9 +86,13 @@ function Index() {
       <ProductHeader
         metrics={metrics}
         activeStatus={activeStatus}
+        showCategories={showCategories}
+        setShowCatgories={setShowCatgories}
         viewProductStatusHandler={viewProductStatusHandler}
       />
+      <ProductCategory showCategories={showCategories} />
       <ProductList currentProducts={currentProducts} />
+      <ProductNavigation />
     </div>
   );
 }
