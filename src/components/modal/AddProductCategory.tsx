@@ -37,7 +37,7 @@ function AddProductCategory() {
     alert(JSON.stringify(categoryData));
   };
   return (
-    <div className="w-[480px] md:w-[460px] bg-white min-h-[335px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative">
+    <div className="w-full md:w-[480px] lg:w-[460px] bg-white min-h-[335px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative">
       <ModalHeader
         Icon={SVGS.ProductIcon}
         title="Add new product category"

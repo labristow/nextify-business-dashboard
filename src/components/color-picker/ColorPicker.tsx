@@ -126,7 +126,7 @@ const ColorPicker = ({
           onChange={colorInputChange}
           type="text"
           placeholder="Enter your brand color code"
-          className="outline-none placeholder:text-sm placeholder:font-normal font-medium border border-gray-300 h-12 rounded-md px-3"
+          className="outline-none w-full md:w-auto placeholder:text-sm placeholder:font-normal font-medium border border-gray-300 h-12 rounded-md px-3"
         />
       </div>
     </div>

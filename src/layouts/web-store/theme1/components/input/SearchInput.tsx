@@ -26,7 +26,7 @@ function SearchInput() {
         onChange={handleSearchProduct}
         type="search"
         placeholder="Search for products..."
-        className={`relative z-30 w-full bg-transparent valid:bg-white focus:bg-white bg-opacity-50 px-4 outline-primary-blue transition-all duration-500 font-semibold h-14 border border-gray-200 rounded-lg`}
+        className={`relative z-30 w-full bg-transparent valid:bg-white focus:bg-white bg-opacity-50 px-4 outline-primary-blue transition-all duration-500 font-semibold h-14 border border-gray-300 rounded-lg`}
       />
       {showOverlay && (
         <div className="w-full z-30 h-[40vh] bg-white absolute rounded-lg mt-1">

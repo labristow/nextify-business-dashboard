@@ -102,7 +102,7 @@ function AddProduct() {
     alert(JSON.stringify(productData));
   };
   return (
-    <div className="w-[480px] md:w-[960px] bg-white min-h-[535px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative">
+    <div className="w-full md:w-[480px] lg:w-[960px] bg-white h-[90vh] md:min-h-[535px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative overflow-y-auto">
       <ModalHeader
         Icon={SVGS.ProductIcon}
         title="Add new product"
@@ -114,7 +114,7 @@ function AddProduct() {
         onSubmit={handleSubmit}
         className="mt-5"
       >
-        <div className="w-full grid grid-cols-2">
+        <div className="w-full grid grid-cols-1 gap-y-5 md:grid-cols-2">
           <div className="w-full row-span-4 px-5">
             <div>
               <TextInput
@@ -126,7 +126,7 @@ function AddProduct() {
                 placeholder="Enter your product name"
               />
             </div>
-            <div className="grid grid-cols-2 gap-3 mt-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
               <TextInput
                 value={productData.price}
                 onChange={handleChange}
@@ -146,13 +146,6 @@ function AddProduct() {
             <div className="mt-3">
               <FileUpload handleFileUpload={handleFileUpload} />
             </div>
-            <div className="mt-3">
-              <ButtonForm
-                type="submit"
-                text="Create new product"
-                className="w-full h-14 bg-primary-blue"
-              />
-            </div>
           </div>
           <div className="w-full row-span-4 px-5">
             <div className="relative">
@@ -165,9 +158,15 @@ function AddProduct() {
                 label="Description"
                 placeholder="Enter your product description"
               />
-              
             </div>
           </div>
+        </div>
+        <div className="mt-3 px-4">
+          <ButtonForm
+            type="submit"
+            text="Create new product"
+            className="w-full h-14 bg-primary-blue"
+          />
         </div>
       </form>
     </div>

@@ -28,7 +28,7 @@ const DiscoverContainer = () => {
     }
   };
   return (
-    <div className="px-20 py-5">
+    <div className="px-5 md:px-20 py-5">
       <div className="header mb-10">
         <h3 className="text-4xl font-semibold">
           Discover more.{" "}
@@ -41,7 +41,7 @@ const DiscoverContainer = () => {
       <div className="">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
-          spaceBetween={100}
+          spaceBetween={80}
           slidesPerView={slideview}
           navigation
           loop

@@ -106,7 +106,7 @@ function UpdateProduct({ data }: { data: IProductProps }) {
     dispatch(hideOverlay());
   };
   return (
-    <div className="w-[480px] bg-white min-h-[565px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative">
+    <div className="w-full md:w-[480px] bg-white h-[90vh] md:min-h-[565px] mx-auto mt-10 shadow-sm rounded-lg py-7 px-5 relative overflow-y-auto">
       <ModalHeader
         Icon={SVGS.ProductIcon}
         title="Update your product"
@@ -128,7 +128,7 @@ function UpdateProduct({ data }: { data: IProductProps }) {
             placeholder="Enter your product name"
           />
         </div>
-        <div className="grid grid-cols-2 gap-3 mt-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
           <TextInput
             value={productData.price}
             onChange={handleChange}

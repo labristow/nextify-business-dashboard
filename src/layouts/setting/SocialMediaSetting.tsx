@@ -81,7 +81,7 @@ function SocialMediaSetting() {
   };
   return (
     <React.Fragment>
-      <div className="grid grid-cols-2 gap-x-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5">
         <div className="w-full">
           <div className="header flex items-start gap-3 mt-5">
             <div className="mt-2">
@@ -101,7 +101,7 @@ function SocialMediaSetting() {
               method="POST"
               autoComplete="off"
               onSubmit={handleSubmit}
-              className="mt-10 w-[420px]"
+              className="mt-10 w-full md:w-[420px]"
             >
               <div>
                 <TextInput
@@ -182,7 +182,7 @@ function SocialMediaSetting() {
               method="POST"
               autoComplete="off"
               onSubmit={handleAddressSubmit}
-              className="mt-10 w-[420px]"
+              className="mt-10 w-full md:w-[420px]"
             >
               <div>
                 <TextInput

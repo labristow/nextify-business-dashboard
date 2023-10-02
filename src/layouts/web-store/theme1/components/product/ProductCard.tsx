@@ -26,7 +26,7 @@ function ProductCard({
   };
 
   return (
-    <div className="h-[465px] w-[325px] relative shadow-sm bg-white hover:shadow-2xl p-5 rounded-2xl transition-all duration-500">
+    <div className="h-[465px] w-[325px] relative shadow-sm bg-white hover:shadow-2xl p-5 rounded-xl transition-all duration-500">
       <div className="product-image w-full bg-transparent h-[302px] rounded-2xl relative shadow-sm hover:shadow-lg transition-all duration-300 flex items-center justify-center border border-gray-200 bg-gray-50">
         <Image
           fill

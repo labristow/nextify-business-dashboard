@@ -15,7 +15,7 @@ function CustomerHeader({
 }) {
   return (
     <div className="w-full">
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex flex-wrap gap-y-4 items-center justify-between">
         <input
           onChange={(e) => handleSearchData(e.target.value)}
           type="text"
@@ -28,7 +28,7 @@ function CustomerHeader({
           name=""
           id=""
           onChange={(e) => handleSortKeyChange(e.target.value)}
-          className="w-[190px] text-sm bg-transparent h-12 rounded-lg outline-none border border-gray-200 px-4 placeholder:text-sm focus:border-gray-500 duration-500"
+          className="w-full md:w-[190px] text-sm bg-transparent h-12 rounded-lg outline-none border border-gray-200 px-4 placeholder:text-sm focus:border-gray-500 duration-500"
         >
           <option value="frequency">Order by frequency</option>
           <option value="dateJoined">Order by joined date</option>

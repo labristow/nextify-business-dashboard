@@ -6,19 +6,21 @@ import SearchInput from "../input/SearchInput";
 
 function Navbar() {
   return (
-    <div className="sticky shadow top-0 w-full h-[100px] bg-white bg-opacity-50 backdrop-blur-xl z-20 flex items-center justify-between px-20">
-      <div className="w-[80px] h-[80px]">
-        <Image
-          src={Logo}
-          className="object-cover flex justify-start"
-          alt="abc"
-          unoptimized
-        />
+    <div className="sticky shadow top-0 w-full h-auto md:h-[100px] bg-white bg-opacity-95 backdrop-blur-lg z-20 flex items-center justify-between flex-wrap px-4 md:px-20">
+      <div className="flex items-center gap-5">
+        <div className="w-[80px] h-[80px] flex-center">
+          <Image
+            src={Logo}
+            className="object-cover flex justify-start"
+            alt="abc"
+            unoptimized
+          />
+        </div>
+        <div className="w-full">
+          <SearchInput />
+        </div>
       </div>
-      <div className="w-1/2">
-        <SearchInput />
-      </div>
-      <div className="flex items-center gap-x-14 col-span-2">
+      <div className="w-full md:w-auto flex mt-6 mb-5 md:mb-0 md:mt-0 items-center justify-between gap-x-14 col-span-2">
         <div className="flex gap-1 items-center">
           <SVGS.ProfileIcon size="28" />
           <div className="flex flex-col items-start">

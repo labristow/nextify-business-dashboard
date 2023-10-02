@@ -4,8 +4,8 @@ import Logo from "@/assets/web-assets/logo.png";
 
 function Footer() {
   return (
-    <div className="w-full h-[40vh] px-[70px] py-20 bg-dark">
-      <div className="grid grid-cols-4">
+    <div className="w-full min-h-[40vh] px-10 md:px-[70px] py-20 bg-dark">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-y-5">
         <div>
           <Image
             src={Logo}

@@ -75,7 +75,7 @@ function ProductContainer() {
   };
 
   return (
-    <div className="px-20 py-10 bg-gray-50 mt-10">
+    <div className="px-5 md:px-20 py-10 bg-gray-50 mt-10">
       <div className="header mb-10">
         <h3 className="text-4xl font-semibold">What's trending now.</h3>
         <p className="text-gray-500 text-xl mt-2">

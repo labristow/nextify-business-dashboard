@@ -66,7 +66,7 @@ function WebsiteSetting() {
   };
   return (
     <div>
-      <div className="header flex items-center justify-between">
+      <div className="header flex items-center flex-wrap gap-y-4 justify-between">
         <div className="flex items-start gap-3 mt-5">
           <div className="mt-2">
             <SVGS.SettingIcon />

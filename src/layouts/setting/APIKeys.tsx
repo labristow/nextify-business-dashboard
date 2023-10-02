@@ -65,7 +65,7 @@ function APIKeys() {
           </p>
         </div>
       </div>
-      <div className="w-[440px]">
+      <div className="w-full md:w-[440px]">
         <div className="w-full h-40 flex-center flex-col">
           {JSON.stringify(credentials)}
           <p className="text-sm text-gray-400">No API credential added yet!</p>
@@ -90,7 +90,7 @@ function APIKeys() {
             placeholder={`Enter your public key`}
           />
         </div>
-        <div className="w-[440px] px-5 mt-3">
+        <div className="w-full md:w-[440px] md:px-5 mt-3">
           <ButtonForm
             onClick={addApiKeyHandler}
             type="submit"

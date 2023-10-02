@@ -11,7 +11,7 @@
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg",
       "https://m.media-amazon.com/images/I/81PWpbHThML._AC_UL1500_.jpg"
     ],
-    "url": "/store/happy-coffe?id=1",
+    "url": "/web-store?id=1",
     "currency": "₦"
   },
   {
@@ -26,7 +26,7 @@
       "https://m.media-amazon.com/images/I/81PWpbHThML._AC_UL1500_.jpg",
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
     ],
-    "url": "/store/happy-coffe?id=2",
+    "url": "/web-store?id=2",
     "currency": "₦"
   },
   {
@@ -41,7 +41,7 @@
       "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg",
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
     ],
-    "url": "/store/happy-coffe?id=3",
+    "url": "/web-store?id=3",
     "currency": "₦"
   },
   {
@@ -56,7 +56,7 @@
       "https://m.media-amazon.com/images/I/51zFWTwKWmL._AC_UL1250_.jpg",
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
     ],
-    "url": "/store/happy-coffe?id=4",
+    "url": "/web-store?id=4",
     "currency": "₦"
   },
   {
@@ -71,7 +71,7 @@
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg",
       "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg"
     ],
-    "url": "/store/happy-coffe?id=5",
+    "url": "/web-store?id=5",
     "currency": "₦"
   },
   {
@@ -86,7 +86,7 @@
       "https://m.media-amazon.com/images/I/61s8fnY+d5L._AC_UL1250_.jpg",
       "https://m.media-amazon.com/images/I/51-8CqjIncL._AC_UL1250_.jpg"
     ],
-    "url": "/store/happy-coffe?id=6",
+    "url": "/web-store?id=6",
     "currency": "₦"
   }
 ]

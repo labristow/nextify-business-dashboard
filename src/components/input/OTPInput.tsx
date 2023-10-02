@@ -39,7 +39,7 @@ function OTPInput({
             onChange={(event) => handleInputChange(event, index)}
             placeholder="*"
             type="number"
-            className="w-20 flex-shrink-0 h-[85px] focus:border-gray-700 outline-none duration-500 text-center font-bold text-5xl border-2 border-gray-300 rounded-md"
+            className="w-16 h-16 md:w-20 flex-shrink-0 md:h-[85px] focus:border-gray-700 outline-none duration-500 text-center font-bold text-5xl border-2 border-gray-300 rounded-md"
           />
         ))}
       </div>

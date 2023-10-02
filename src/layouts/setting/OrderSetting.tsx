@@ -52,7 +52,7 @@ function OrderSetting() {
           </p>
         </div>
       </div>
-      <div className="mt-10 _w-[440px] grid grid-cols-2 gap-10 px-5">
+      <div className="mt-10 _w-[440px] grid grid-cols-1 md:grid-cols-2 gap-10 md:px-5">
         <div className="select-supported-states">
           <h5 className="font-semibold">Supported States</h5>
           <p className="text-sm">
@@ -115,7 +115,7 @@ function OrderSetting() {
           />
         </div>
       </div>
-      <div className="w-[440px] px-5 mt-3">
+      <div className="w-full md:w-[440px] md:px-5 mt-3">
         <ButtonForm
           type="submit"
           text="Save order settings"

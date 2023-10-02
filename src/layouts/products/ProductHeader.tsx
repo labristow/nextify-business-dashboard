@@ -38,12 +38,12 @@ function ProductHeader({
 
   return (
     <div className="w-full bg-gray-50 px-6 md:px-0">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center flex-wrap gap-y-4 justify-between">
         <div className="header">
           <h4 className="font-bold text-3xl uppercase">My Store</h4>
           <p className="text-sm">Managing Your Online Shop with Ease</p>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center w-full md:w-auto justify-between">
           <p className="text-sm">Show your product categories?</p>
           <Switch checked={showCategories} onChange={handleChange} />
         </div>
